@@ -38,6 +38,9 @@
                     return;
                 }
 
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"Your choice is: {playerMove}");
+
                 Random randomNumber = new Random();
                 int computerRandomNumber = randomNumber.Next(1, 4);
                 string computerMove = "";
