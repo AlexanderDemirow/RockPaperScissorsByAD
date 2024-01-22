@@ -8,6 +8,10 @@
             const string Paper = "Paper";
             const string Scissors = "Scissors";
 
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
+
             Console.WriteLine("Choose [r]ock, [p]aper or [s]cissors: ");
             string playerMove = Console.ReadLine();
 
@@ -41,20 +45,27 @@
 
             }
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
+           
             Console.WriteLine($"The computer chose: {computerMove}");
 
             if ((playerMove == Rock && computerMove == Scissors) || (playerMove == Paper && computerMove == Rock) || (playerMove == Scissors && computerMove == Paper))
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("You win!");
             }
             else if ((computerMove == Rock && playerMove == Scissors) || (computerMove == Paper && playerMove == Rock) || (computerMove == Scissors && playerMove == Paper))
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("You lose!");
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("This game was a draw.");
             }
+            Console.ResetColor();
+           
         }
     }
 }
