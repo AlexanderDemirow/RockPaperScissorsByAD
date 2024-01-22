@@ -15,3 +15,5 @@ Despite its underlying complexity, the game’s rules are straightforward. Playe
 2.Scissors win against paper.
 
 3.Paper wins against rock.
+
+The winner is the player whose choice beats the choice of his opponent. If both players choose the same option (e.g.Rock) the outcome is DRAW.
